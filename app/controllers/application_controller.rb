@@ -32,7 +32,7 @@ class ApplicationController < Sinatra::Base
     erb :edit
   end
 
-  patch '/recipes/:id' do #edit action
+  post '/recipes/:id' do #edit action
     binding.pry
     @recipe = Recipe.find_by_id(params[:id])
     @recipe.name = params[:name]
