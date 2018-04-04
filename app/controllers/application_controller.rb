@@ -34,7 +34,7 @@ class ApplicationController < Sinatra::Base
 
   post '/recipes/:id' do #edit action
     require 'pry'
-    binding.pry
+    # binding.pry
     @recipe = Recipe.find_by_id(params[:id])
     @recipe.name = params[:name]
     @recipe.ingredients = params[:ingredients]
